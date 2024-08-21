@@ -33,7 +33,7 @@
     /* Estilo para o carrossel */
     .swiper {
       width: 100%; /* O carrossel ocupa toda a largura da tela */
-      height: 600px; /* Altura fixa de 400px */
+      height: auto; /* Altura fixa de 400px */
       margin: 20px auto;
     }
 
@@ -45,7 +45,7 @@
 
     .swiper-slide img {
       width: 100%; /* Imagem ocupa toda a largura da tela */
-      height: 600px; /* Altura fixa de 400px */
+      height: auto; /* Altura fixa de 400px */
       object-fit: cover; /* Mantém a proporção e corta a imagem se necessário */
     }
 
@@ -62,6 +62,97 @@
       width: 100px;
       height: 50px;
     }
+
+    .intro {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .intro-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .titulo-principal {
+      font-size: 2.5rem;
+    }
+
+    .atributos {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .paragrafo {
+      font-size: 1rem;
+    }
+
+    .btns {
+      margin-top: 20px;
+    }
+
+    .contato-div {
+      display: inline-block;
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+    }
+
+    .contato-div img {
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .titulo-principal {
+        font-size: 1.8rem;
+      }
+
+      .atributos {
+        font-size: 1rem;
+      }
+
+      .paragrafo {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+      }
+
+      .contato-div {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .titulo-principal {
+        font-size: 1.5rem;
+      }
+
+      .atributos {
+        font-size: 0.9rem;
+      }
+
+      .paragrafo {
+        font-size: 0.8rem;
+      }
+
+      .btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+      }
+
+      .contato-div {
+        font-size: 0.8rem;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
   </style>
 
 </head>
@@ -109,7 +200,6 @@
       <div class="intro-content">
         <h1 class="titulo-principal">O melhor do <span>IPTV</span> para <span>você</span> e sua <span>família</span></h1>
         <b class="atributos">Qualidade <span>•</span> Confiança <span>•</span> Preço justo</b>
-        <p class="paragrafo p-intro">O IPTV (Internet Protocol Television) ou TVIP (Televisão por IP) é um novo método de transmissão de sinais televisivos...</p>
         
         <!-- Carrossel de Imagens -->
         <div class="swiper mySwiper">
@@ -118,13 +208,13 @@
               <img src="assets/ceplay.jpeg" alt="Imagem 1">
             </div>
             <div class="swiper-slide">
-              <img src="assets/canais.jpg" alt="Imagem 1">
+              <img src="assets/canais.jpeg" alt="Imagem 1">
             </div>
             <div class="swiper-slide">
-              <img src="assets/Filmes.jpg" alt="Imagem 2">
+              <img src="assets/filmes.jpeg" alt="Imagem 2">
             </div>
             <div class="swiper-slide">
-              <img src="assets/series.jpg" alt="Imagem 3">
+              <img src="assets/series.jpeg" alt="Imagem 3">
             </div>
           </div>
           <!-- Controles do Carrossel -->
@@ -267,9 +357,9 @@
         <p class="paragrafo p-contato">Ficou com alguma dúvida ou precisa de alguma ajuda com sua compra? Então entre em contato conosco pelo WhatsApp</p>
         <div class="whatsapp">
           <figure>
-            <img src="assets/whatsapp.svg" alt="Whatsapp: (62) 98888-8888">
+            <img src="assets/whatsapp.svg" alt="Whatsapp: (83) 98161-9333">
           </figure>
-          <b class="p-contato">(62) 98888-8888</b>
+          <b class="p-contato">(83) 98161-9333</b>
         </div>
         <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="btn">Mandar mensagem</a>
       </div>
@@ -277,7 +367,7 @@
   </main>
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p class="paragrafo p-footer">© Todos os direitos reservados</p>
+    <p class="paragrafo p-footer">© Todos os direitos reservados - Ayrton Rodrigues</p>
   </footer>
   <!-- ========== SCRIPTS ========== -->
   <script src="js/main.js"></script>
