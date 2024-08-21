@@ -33,7 +33,7 @@
     /* Estilo para o carrossel */
     .swiper {
       width: 100%; /* O carrossel ocupa toda a largura da tela */
-      height: 400px; /* Altura fixa de 400px */
+      height: 600px; /* Altura fixa de 400px */
       margin: 20px auto;
     }
 
@@ -45,7 +45,7 @@
 
     .swiper-slide img {
       width: 100%; /* Imagem ocupa toda a largura da tela */
-      height: 400px; /* Altura fixa de 400px */
+      height: 600px; /* Altura fixa de 400px */
       object-fit: cover; /* Mantém a proporção e corta a imagem se necessário */
     }
 
@@ -57,6 +57,11 @@
     .swiper-pagination-bullet-active {
       background-color: #ffab00;
     }
+
+    .logo {
+      width: 100px;
+      height: 50px;
+    }
   </style>
 
 </head>
@@ -66,7 +71,7 @@
   <header class="header" data-header>
     <nav class="nav">
       <a href="#intro" class="logo">
-        <img src="assets/logo.svg" alt="IPTV">
+        <img src="assets/logo.jpeg" alt="IPTV">
       </a>
 
       <button class="btn-mobile" data-mobile-button aria-expanded="false" aria-controls="menu" aria-haspopup="true">Menu</button>
@@ -109,6 +114,9 @@
         <!-- Carrossel de Imagens -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/ceplay.jpeg" alt="Imagem 1">
+            </div>
             <div class="swiper-slide">
               <img src="assets/canais.jpg" alt="Imagem 1">
             </div>
@@ -198,9 +206,9 @@
           <a href="#preco" class="btn">Conheça nosso plano único</a>
           <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="contato-div">
             <figure>
-              <img src="assets/whatsapp.svg" alt="Whatsapp: (62) 98888-8888">
+              <img src="assets/whatsapp.svg" alt="Whatsapp: (83) 98161-9333">
             </figure>
-            <b class="p-contato">(62) 98888-8888</b>
+            <b class="p-contato">(83) 98161-9333</b>
           </a>
         </div>
       </div>
@@ -240,7 +248,7 @@
           <div class="preco-card-valor">
             <div class="preco-card-valor-content">
               <sup class="preco-card-sup">R$</sup>
-              <strong class="valor">29,90</strong>
+              <strong class="valor">20,00</strong>
               <sub class="preco-card-mes">/mês</sub>
             </div>
           </div>
