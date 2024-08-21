@@ -1,340 +1,295 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IPTV</title>
-    <link rel="stylesheet" href="style.css" />
+  <!-- ========== METATAGS ========== -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Meu IPTV HD">
+  <meta name="description" content="O melhor do IPTV para você e sua família. Conheça nosso plano único e venha aproveitar mais de 60 mil conteúdos.">
+  <meta name="keywords" content="iptv, meuiptv, tv, tv box">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="Portuguese">
+  <title>Meu IPTV - O melhor do IPTV para você e sua família</title>
+  <!-- ========== FAVICON ========== -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- ========== FONTES ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oxygen:wght@700&display=swap" rel="stylesheet">
+  <!-- ========== CSS ========== -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- ========== Swiper CSS ========== -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="shortcut icon" href="https://www.loopnerd.com.br/img/favicon.png" type="image/ico" />
-    <script type="text/javascript" async="" src="js/script.js"></script>
+  <!-- ========== Swiper JS ========== -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <style>
+    /* Estilo para o carrossel */
+    .swiper {
+      width: 100%; /* O carrossel ocupa toda a largura da tela */
+      height: 400px; /* Altura fixa de 400px */
+      margin: 20px auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 100%; /* Imagem ocupa toda a largura da tela */
+      height: 400px; /* Altura fixa de 400px */
+      object-fit: cover; /* Mantém a proporção e corta a imagem se necessário */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #0d47a1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #ffab00;
+    }
+  </style>
+
 </head>
 
 <body>
-    <div id="home">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- <div class="logomarca"><img src="imgs/Pré-Iptv.gif" /></div> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#home">Home</a>
-                    <a class="nav-item nav-link" href="#destaques">Destaques</a>
-                    <a class="nav-item nav-link" href="#pricing">Planos</a>
-                    <a class="nav-item nav-link" target="_blank" href="https://wa.me/5562984696547?text=Fale+conosco%21">Contatos</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- <header>
-        <nav>
-            <a class="logo" href="/">Pré-Iptv</a>
-            <div class="logo"><img src="imgs/Pré-Iptv.gif"></div>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li><a href="#">Planos</a></li>
-                <li><a href="#">Canais</a></li>
-                <li><a href="#">Ao vivo</a></li>
-                <li><a href="#">Contatos</a></li>
-            </ul>
-        </nav>
-    </header> -->
+  <!-- ========== HEADER ========== -->
+  <header class="header" data-header>
+    <nav class="nav">
+      <a href="#intro" class="logo">
+        <img src="assets/logo.svg" alt="IPTV">
+      </a>
 
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+      <button class="btn-mobile" data-mobile-button aria-expanded="false" aria-controls="menu" aria-haspopup="true">Menu</button>
+
+      <ul class="menu" data-menu role="menu">
+        <li><a href="#intro">Início</a></li>
+        <li><a href="#preco">Preço</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <a href="#preco" class="btn">Oferta</a>
+    </nav>
+  </header>
+  <!-- ========== MAIN ========== -->
+  <main>
+    <!-- ========== INTRO ==========
+    <section class="intro" id="intro">
+      <div class="intro-content">
+        <h1 class="titulo-principal">O melhor do <span>IPTV</span> para <span>você</span> e sua <span>família</span></h1>
+        <b class="atributos">Qualidade <span>•</span> Confiança <span>•</span> Preço justo</b>
+        <p class="paragrafo p-intro">O IPTV (Internet Protocol Television) ou TVIP (Televisão por IP) é um novo método de transmissão de sinais televisivos. Assim como o VOIP (Voz sobre IP), o IPTV usa o protocolo IP Internet Protocol como meio de transporte do conteúdo.</p>
+        <div class="btns">
+          <a href="#preco" class="btn">Conheça nosso plano único</a>
+          <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="contato-div">
+            <figure>
+              <img src="assets/whatsapp.svg" alt="Whatsapp: (83) 98161-9333">
+            </figure>
+            <b class="p-contato">(83) 98161-9333</b>
+          </a>
+        </div>
+      </div>
+    </section> -->
+    <!-- ========== INTRO ========== -->
+    <section class="intro" id="intro">
+      <div class="intro-content">
+        <h1 class="titulo-principal">O melhor do <span>IPTV</span> para <span>você</span> e sua <span>família</span></h1>
+        <b class="atributos">Qualidade <span>•</span> Confiança <span>•</span> Preço justo</b>
+        <p class="paragrafo p-intro">O IPTV (Internet Protocol Television) ou TVIP (Televisão por IP) é um novo método de transmissão de sinais televisivos...</p>
+        
+        <!-- Carrossel de Imagens -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/canais.jpg" alt="Imagem 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/Filmes.jpg" alt="Imagem 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/series.jpg" alt="Imagem 3">
+            </div>
+          </div>
+          <!-- Controles do Carrossel -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
 
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imgs/banner_01.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Canais ao Vivo</h5>
-                    <p>Canais brasileiros, internacionais e muito mais, confira...</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imgs/banner_02.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Filmes lançamentos 2023</h5>
-                    <p>Confira os melhores filmes de 2023 aqui....</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imgs/banner_03.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Séries Premiadas</h5>
-                    <p>Sem dúvidas aqui você irá encontrar a sua serie predileta...</p>
-                </div>
-            </div>
+        <div class="btns">
+          <a href="#preco" class="btn">Conheça nosso plano único</a>
+          <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="contato-div">
+            <figure>
+              <img src="assets/whatsapp.svg" alt="Whatsapp: (83) 98161-9333">
+            </figure>
+            <b class="p-contato">(83) 98161-9333</b>
+          </a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <script src="class MobileNavbar.js"></script>
-    <section id="banner-area" class="banner-area-section home-2">
-        <div class="container">
-            <div class="row">
-                <div class="banner-area-content">
-                    <div class="banner-area-head">
-                        <h1 class="pb30" style="font-weight: 500; font-size: 50px;">Peça o seu teste e conheça os nossos
-                            planos</h1>
-
-                        <div class="banner-text">
-                            <h3 class="pb30">
-                                <p><span>Melhor site de Istreaming</span></p>
-                            </h3>
-                        </div>
-
-
-                        <div class="wrap">
-                            <a href="https://wa.me/5562984696547?text=Fale+conosco%21" target="_blank"><button class="botao"><img src="imgs/whatsapp.png" width="50px" height="50px" />
-                                    ENTRAR EM
-                                    CONTATO</button></a>
-                        </div>
-
-
-                        <!-- <div class="banner-mock-up home-1 zooming">
-                            <img src="assets/img/mock-up/iptvlogo2.png" alt="img">
-                        </div> -->
-
-                    </div><!-- /banner-area-head -->
-                </div><!-- /banner-area-content -->
-            </div><!-- /row -->
-        </div><!-- /.container -->
-
-        <div style="width: 100%; margin-top: 100px;">
-
-            <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28 " preserveAspectRatio="none">
-                <defs>
-                    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-                    </path>
-                </defs>
-                <g class="wave1">
-                    <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
-                    </use>
-                </g>
-                <g class="wave2">
-                    <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
-                    </use>
-                </g>
-                <g class="wave3">
-                    <use xlink:href="#wave-path" x="50" y="9" fill="#96FFFF">
-                    </use>
-                </g>
-            </svg>
-        </div>
-
+      </div>
     </section>
-    <!-- Start of banner section 
-		==================================================================================================================================== -->
 
-
-    <!-- Start of banner section 
-		==================================================================================================================================== -->
-    <div id="destaques">
-        <div class="title-planos" style="padding-top:5px; margin-bottom: 10px;">
-            <h1 class="sub-title">Destaques IPVT</h1>
+    <!-- ========== SERVIÇOS ========== -->
+    <section class="servicos">
+      <div class="servicos-content content">
+        <h1 class="titulo">
+          <div>Temos <span>tudo</span> o que você <span>precisa</span></div>
+        </h1>
+        <div class="cards">
+          <div class="card-item">
+            <h2 class="card-titulo">Suporte</h2>
+            <figure class="card-img">
+              <img src="assets/ferramenta.svg" alt="Suporte">
+            </figure>
+            <p class="paragrafo p-card">Suporte qualificado via WhatsApp, qualquer problema que ocorrer estaremos sempre prontos para resolver imediatamente.</p>
+          </div>
+          <div class="card-item">
+            <h2 class="card-titulo">Servidores</h2>
+            <figure class="card-img">
+              <img src="assets/servidor.svg" alt="Servidores">
+            </figure>
+            <p class="paragrafo p-card">Contamos com os melhores servidores do mercado, para garantir a melhor estabilidade dos canais.</p>
+          </div>
+          <div class="card-item">
+            <h2 class="card-titulo">Facilidade</h2>
+            <figure class="card-img">
+              <img src="assets/facilidade.svg" alt="Facilidade">
+            </figure>
+            <p class="paragrafo p-card">Assista a qualquer hora e em qualquer lugar aos seus programas favoritos.</p>
+          </div>
         </div>
-    </div>
-    <section id="features" class="features-section">
-        <div class="container"><br>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="imgs/canais.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Canais Ao vivo</h5>
-                            <p class="card-text">Canais Brasileiros e Internacionais, futebol, noticias, musicas e muito
-                                mais. São diversos canais para todas as idades e gostos diferentes</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="imgs/Filmes.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Filmes Lançamentos 2023</h5>
-                            <p class="card-text">Novos conteúdos são adicionados frequentemente e você não precisa fazer
-                                nada. Os conteúdos são atualizados para você automaticamente</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="imgs/series.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Séries premiadas</h5>
-                            <p class="card-text">Acervo imenso de séries para todas as idades e gostos. São séries
-                                lançamentos atualizada por uma super equipe.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /container -->
+      </div>
     </section>
-    <!-- Start of banner section 
-		==================================================================================================================================== -->
-
-
-    <!-- Start of Header 
-		==================================================================================================================================== -->
-
-    <section id="pricing" class="pricing-plan-section">
-        <div class="container">
-            <div class="title-planos" style="padding-top:5px; margin-bottom: 10px;">
-                <h1 class="sub-title">Os melhores planos para você</h1>
-                <span class="title-text">OS MELHORES PLANOS COM PREÇOS QUE CABEM NO SEU
-                    BOLSO</span>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <div class="card text-center mb-3" style="width: 21rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Plano Bronze</h5>
-                                <h6 class="card-sub-title">R$30,00 reais/Mês</h6><br>
-                                <p class="card-text">Canais <b>HD, FHD &amp; 4K</b>
-                                    Canais de Futebol<br>
-                                    Canais de Esportes<br>
-                                    Canais Abertos<br>
-                                    Canais de Desenhos<br>
-                                    Guia de Programação (EPG)<br>
-                                    Filmes lançamentos<br>
-                                    Séries lançamentos<br></p>
-                                <a href="https://wa.me/5562984696547?text=Fale+conosco%21" target="_blank" class="btn btn-primary">COMPRAR</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center mb-3" style="width: 21rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Plano Prata</h5>
-                                <h6 class="card-sub-title">R$150,00 reais/6 Meses</h6><br>
-                                <p class="card-text">Canais <b>HD, FHD &amp; 4K</b>
-                                    Canais de Futebol<br>
-                                    Canais de Esportes<br>
-                                    Canais Abertos<br>
-                                    Canais de Desenhos<br>
-                                    Guia de Programação (EPG)<br>
-                                    Filmes lançamentos<br>
-                                    Séries lançamentos<br></p>
-                                    <a href="https://wa.me/5562984696547?text=Fale+conosco%21" target="_blank" class="btn btn-primary">COMPRAR</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center mb-3" style="width: 21rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Plano Ouro</h5>
-                                <h6 class="card-sub-title">R$300,00 reais/12 Meses</h6><br>
-                                <p class="card-text">Canais <b>HD, FHD &amp; 4K</b>
-                                    Canais de Futebol<br>
-                                    Canais de Esportes<br>
-                                    Canais Abertos<br>
-                                    Canais de Desenhos<br>
-                                    Guia de Programação (EPG)<br>
-                                    Filmes lançamentos<br>
-                                    Séries lançamentos<br></p>
-                                    <a href="https://wa.me/5562984696547?text=Fale+conosco%21" target="_blank" class="btn btn-primary">COMPRAR</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--  /container -->
+    <!-- ========== VANTAGENS ========== -->
+    <section class="vantagens">
+      <div class="vantagens-content">
+        <h1 class="vantagens-titulo">
+          <div>Aproveite mais <span>vantagens</span></div>
+        </h1>
+        <ul class="vantagens-lista">
+          <li class="vantagem-item">
+            <figure>
+              <img src="assets/tv.svg" alt="Acesso à canais fechados e abertos">
+            </figure>
+            <p class="paragrafo">Acesso à canais fechados e abertos</p>
+          </li>
+          <li class="vantagem-item">
+            <figure>
+              <img src="assets/rolo-de-filme.svg" alt="Acesso à canais fechados e abertos">
+            </figure>
+            <p class="paragrafo">Mais de 60 mil conteúdos</p>
+          </li>
+          <li class="vantagem-item">
+            <figure>
+              <img src="assets/multiplataformas.svg" alt="Acesso à canais fechados e abertos">
+            </figure>
+            <p class="paragrafo">Disponibilidade à multiplataformas</p>
+          </li>
+        </ul>
+        <div class="btns">
+          <a href="#preco" class="btn">Conheça nosso plano único</a>
+          <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="contato-div">
+            <figure>
+              <img src="assets/whatsapp.svg" alt="Whatsapp: (62) 98888-8888">
+            </figure>
+            <b class="p-contato">(62) 98888-8888</b>
+          </a>
+        </div>
+      </div>
     </section>
-    <div class="duvidas-faq">
-
-        <div class="title-faq">
-            <h1 class="title deep-black pb40">DÚVIDAS FREQUENTES</h1>
-        </div>
-        <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#p2p" role="button" aria-expanded="false"
-                aria-controls="multiCollapseExample1">O que é o sistema P2P?</a><br>
-        </p>
-        <div class="row">
-            <div class="col">
-                <div class="collapse multi-collapse" id="p2p">
-                    <div class="card card-body">
-                        O sistema p2p é a nova tecnologia onde somos os pioneiros do mercado, dominamos a
-                        tecnologia p2p que significa conexão ponta a ponta (per-to-per), onde o cliente é o
-                        servidor e quanto mais pessoas conectadas ao nosso sistema, mais qualidade você
-                        terá.
-                    </div>
-                </div>
+    <!-- ========== PREÇO ========== -->
+    <section class="preco" id="preco">
+      <div class="preco-content content">
+        <h1 class="titulo">Preço</h1>
+        <div class="preco-card">
+          <h2 class="preco-card-titulo">Plano Único</h2>
+          <ul class="preco-card-lista">
+            <li class="preco-card-lista-item">
+              <figure>
+                <img src="assets/check.svg" alt="+ 60 Mil Conteúdos">
+              </figure>
+              <p class="paragrafo">+ 60 Mil Conteúdos</p>
+            </li>
+            <li class="preco-card-lista-item">
+              <figure>
+                <img src="assets/check.svg" alt="Assista na Smart TV ou TV Box">
+              </figure>
+              <p class="paragrafo">Assista na Smart TV ou TV Box</p>
+            </li>
+            <li class="preco-card-lista-item">
+              <figure>
+                <img src="assets/check.svg" alt="Assista no smartphone/tablet">
+              </figure>
+              <p class="paragrafo">Assista no smartphone/tablet</p>
+            </li>
+            <li class="preco-card-lista-item">
+              <figure>
+                <img src="assets/check.svg" alt="Canais Adulto (Opcional)">
+              </figure>
+              <p class="paragrafo">Canais Adulto (Opcional)</p>
+            </li>
+          </ul>
+          <div class="preco-card-valor">
+            <div class="preco-card-valor-content">
+              <sup class="preco-card-sup">R$</sup>
+              <strong class="valor">29,90</strong>
+              <sub class="preco-card-mes">/mês</sub>
             </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="btn">Solicitar no whatsapp</a>
         </div>
-        <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#iptvfaq" role="button" aria-expanded="false"
-                aria-controls="multiCollapseExample1">Quais são as vantagens do iptv?</a><br>
-        </p>
-        <div class="row">
-            <div class="col">
-                <div class="collapse multi-collapse" id="iptvfaq">
-                    <div class="card card-body">
-                        Uma das principais vantagens é o valor cobrado pelos serviços, muito mais barato que
-                        os serviços de TV convencional. A possibilidade de assistir seu programa de TV em
-                        qualquer lugar, e em qualquer dispositivo com acesso a internet(computadores,
-                        aparelhos de DVD e de Blu-ray, TV smart, decodificadores, celulares e tablets), não
-                        ficando preso a um instalação de antena ou cabo.
-                    </div>
-                </div>
-            </div>
+      </div>
+    </section>
+    <!-- ========== CITAÇÃO ========== -->
+    <blockquote class="citacao">
+      <p class="citacao-paragrafo">“A televisão é uma janela que nos abre uma porta para o mundo.”</p>
+    </blockquote>
+    <!-- ========== CONTATO ========== -->
+    <section class="contato" id="contato">
+      <div class="contato-content content">
+        <h1 class="titulo">Contato</h1>
+        <p class="paragrafo p-contato">Ficou com alguma dúvida ou precisa de alguma ajuda com sua compra? Então entre em contato conosco pelo WhatsApp</p>
+        <div class="whatsapp">
+          <figure>
+            <img src="assets/whatsapp.svg" alt="Whatsapp: (62) 98888-8888">
+          </figure>
+          <b class="p-contato">(62) 98888-8888</b>
         </div>
-    </div>
-
-
-    <footer>
-        <nav class="btn_social">
-            <ul>
-                <li><a href="#" target="_blank" title="facebook"><i class="icon icon-facebook"></i></a></li>
-                <li><a href="#" target="_blank" title="instagram"><i class="icon icon-instagram"></i></a></li>
-                <li><a href="#" target="_blank" title="youtube"><i class="icon icon-youtube"></i></a></li>
-                <li><a href="https://wa.me/5562984696547?text=Fale+conosco%21" target="_blank" title="youtube"><i class="icon icon-whatsapp"></i></a></li>
-                <!-- <li><a href="#" target="_blank" title="linkdin"><i class="icon icon-linkedin"></i></a></li> -->
-            </ul>
-
-        </nav>
-
-        <div class="main_footer_copy">
-            <center></center>
-            <p class="m-b-footer"> IPTV Todos Direitos Reservados © copyright 2024 - Ayrton Rodrigues.</p>
-            </center>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+        <a href="https://api.whatsapp.com/send?phone=558381619333" target="_blank" class="btn">Mandar mensagem</a>
+      </div>
+    </section>
+  </main>
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p class="paragrafo p-footer">© Todos os direitos reservados</p>
+  </footer>
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/main.js"></script>
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>

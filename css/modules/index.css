@@ -1,0 +1,356 @@
+/* HEADER */
+.header {
+  background: var(--background-header);
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 999;
+  box-shadow: var(--shadow-header);
+  transition: all 0.4s;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu li a {
+  font-family: var(--font-titulo);
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  color: var(--branco);
+  transition: 0.4s;
+  display: block;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: var(--vermelho);
+}
+
+.logo img {
+  border-radius: 50%;
+  box-shadow: 2px 2px 0px 0 var(--azul), -2px -2px 0px 0 var(--azul);
+}
+
+/* HEADER ACTIVE */
+.header.active {
+  height: var(--header-scroll-height);
+  padding: 10px 20px;
+  background-color: var(--cinza-2);
+  box-shadow: 4px 10px 20px 0 rgba(0, 0, 0, 0.35);
+}
+
+.header.active .menu li a {
+  font-size: 0.875rem;
+}
+
+.header.active .logo img {
+  max-width: 40px;
+}
+
+/* INTRO */
+.intro {
+  background: url('background-intro.jpg') no-repeat center center;
+}
+
+.intro-content {
+  padding: 130px 60px 130px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.atributos {
+  font-family: var(--font-titulo);
+  font-size: 1.5rem;
+  color: var(--azul);
+}
+
+.atributos span {
+  color: var(--vermelho);
+}
+
+.p-intro {
+  margin: 30px 0;
+  max-width: 500px;
+}
+
+/* INTRO RESPONSIVO */
+@media screen and (max-width: 700px) {
+  .intro-content {
+    padding: 120px 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .atributos {
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+/* SERVIÇOS */
+.cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item {
+  padding: 60px 30px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid var(--azul);
+  border-radius: 4px;
+  box-shadow: 4px 4px 20px 0 #08D9D660;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.4s;
+}
+
+.card-item:hover {
+  box-shadow: 4px 4px 20px 0 var(--azul);
+}
+
+.card-img img {
+  transition: all 0.4s;
+}
+
+.card-item:hover .card-img img {
+  transform: translate3d(0, -8px, 0);
+}
+
+.card-titulo {
+  font-family: var(--font-titulo);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--branco);
+}
+
+.card-img {
+  margin: 30px 0;
+}
+
+.p-card {
+  border-top: 4px solid var(--vermelho);
+  padding-top: 30px;
+  text-align: center;
+  max-width: 280px;
+}
+
+/* VANTAGENS */
+.vantagens {
+  background: url('../../assets/background-vantagens.jpg') no-repeat center center;
+}
+
+.vantagens-content {
+  padding: 80px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.vantagens-titulo {
+  font-family: var(--font-titulo);
+  font-size: 3.5rem;
+  color: var(--vermelho);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.vantagens-titulo span {
+  color: var(--azul);
+}
+
+.vantagens-titulo::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  box-shadow: var(--shadow-azul);
+  background: var(--azul);
+}
+
+.vantagens-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 60px 0;
+}
+
+.vantagem-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50px auto;
+  gap: 20px;
+}
+
+/* VANTAGENS RESPONSIVO */
+@media screen and (max-width: 700px) {
+  .vantagens {
+    background-position: 70% 70%;
+  }
+  .vantagens-content {
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .vantagens-titulo {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .vantagens-lista {
+    margin: 30px 0;
+  }
+  .vantagem-item {
+    grid-template-columns: 40px auto;
+  }
+  .vantagem-item p {
+    font-size: 0.875rem;
+  }
+}
+/* PREÇO */
+.preco-card-titulo {
+  font-family: var(--font-titulo);
+  font-size: 2rem;
+  color: var(--azul);
+}
+
+.preco-card {
+  margin: 60px auto 0;
+  padding: 60px 30px;
+  max-width: 400px;
+  background-color: var(--cinza);
+  border-radius: 4px;
+  box-shadow: var(--shadow-cinza);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.preco-card-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preco-card-lista-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.preco-card-valor {
+  border-top: 1px solid var(--azul);
+  padding: 30px;
+  border-bottom: 1px solid var(--azul);
+}
+
+.preco-card-sup {
+  font-family: var(--font-titulo);
+  font-size: 1.5rem;
+  color: var(--azul);
+}
+
+.valor {
+  font-family: var(--font-titulo);
+  font-size: 3rem;
+  color: var(--vermelho);
+}
+
+.preco-card-mes {
+  font-family: var(--font);
+  font-size: 1.5rem;
+  color: var(--branco);
+}
+
+/* PREÇO RESPONSIVO */
+@media screen and (max-width: 700px) {
+  .preco-card-lista-item {
+    grid-template-columns: 30px auto;
+  }
+  .preco-card-valor {
+    padding: 10px;
+  }
+  .preco-card-lista-item p {
+    font-size: 0.875rem;
+  }
+  .valor {
+    font-size: 2.5rem;
+  }
+  .preco-card-mes,
+  .preco-card-sup {
+    font-size: 1rem;
+  }
+}
+
+/* CITAÇÃO */
+.citacao {
+  padding: 130px 20px;
+  background: url('../../assets/background-citacao.jpg') no-repeat center center;
+}
+
+.citacao-paragrafo {
+  font-family: var(--font-titulo);
+  font-size: 2rem;
+  color: var(--branco);
+  text-align: center;
+}
+
+/* CITAÇÃO RESPONSIVO */
+@media screen and (max-width: 700px) {
+  .citacao-paragrafo {
+    font-size: 1.5rem;
+  }
+}
+
+/* CONTATO */
+.contato-content {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.p-contato {
+  font-family: var(--font-titulo);
+  color: var(--branco);
+  text-align: center;
+  max-width: 400px;
+}
+
+.whatsapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--cinza);
+  padding: 30px;
+}

@@ -1,0 +1,27 @@
+/* Estilo para o carrossel */
+.swiper {
+    width: 100%;
+    max-width: 800px; /* Limita o carrossel a um tamanho máximo */
+    height: 300px; /* Define uma altura razoável para as imagens */
+    margin: 20px auto; /* Centraliza o carrossel */
+}  
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente a imagem dentro do slide */
+    align-items: center; /* Centraliza verticalmente a imagem dentro do slide */
+}
+  
+.swiper-slide img {
+    max-width: 100%; /* Faz a imagem ocupar o máximo possível dentro do container, sem ultrapassar */
+    max-height: 100%; /* Mantém a imagem dentro da altura definida */
+    object-fit: cover; /* Corta a imagem para preencher o container sem distorção */
+}
+  
+.swiper-button-next, .swiper-button-prev {
+    color: #0d47a1; /* Cor dos botões de navegação */
+}
+  
+.swiper-pagination-bullet-active {
+    background-color: #ffab00; /* Cor da página ativa no carrossel */
+}
+        
