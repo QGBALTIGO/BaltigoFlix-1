@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  header{                                                                <!--Barra de Menu-->
+     height: 110px;                                                      <!--Cabeçalho-->
+     text-align: center;
+     padding-top: 20px;                                                  <!--Cria uma faixa em cima da barra de menu-->
+       
+  }
+  
+  a{
+    color: rgb(253, 255, 251);                                        <!--Cor das fontes-->
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  header{                                                               <!--Sblinhar as palavras do menu-->
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index:10;
+    
+  }
+
+  a:hover {
+    opacity: 0.7;
+    
+  }
+  
+  .logo {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+   
+  nav a:hover{                                                          <!--Muda a cor da palavra quando passa o mouse em cima-->
+    transition: 0.8s;
+    background-color: rgb(227, 230, 58);
+    color: rgb(3, 13, 20);
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #1d374762;
+    height: 10vh;
+  }
+  
+  main {
+    background: url("imagem-de-fundo/estádio.jpg.jpg") no-repeat center center;  <!--Imagem do fundo do Site e Altura de duas páginas>
+    
+    background-size: cover;
+    height: 300vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 75px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 20px;
+    height: 15px;
+    background: rgba(236, 9, 9, 0.548);
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #2f4064;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .banner-area-section.home-2{
+    padding-top: 170px;
+    padding-bottom:0px;
+  }
+
+  .features-icon{
+    text-align: center;
+  }
+  .features-icon img{
+    position: relative; 
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    vertical-align: middle;
+    margin-top: -40%;
+  }
+
+  .extra-left-content{
+    margin-top:0px;
+  }
+
+  .extra-features-section .section-content{
+    padding-top:60px;
+  }
+
+  .hero-waves {
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+    z-index: 5;
+    position: relative;
+  }
+
+  .wave1 use {
+    -webkit-animation: move-forever1 10s linear infinite;
+    animation: move-forever1 10s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+
+  .wave2 use {
+    -webkit-animation: move-forever2 8s linear infinite;
+    animation: move-forever2 8s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+
+  .wave3 use {
+    -webkit-animation: move-forever3 6s linear infinite;
+    animation: move-forever3 6s linear infinite;
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+  }
+
+  @-webkit-keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+
+  @-webkit-keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+
+  @-webkit-keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+
+  
+    .menu-bg-overlay{
+      background: rgba(0, 0, 0, 0) linear-gradient(to right, #EE0979 0%, #FF6A00 100%) repeat scroll 0 0;
+    }
+    .main-menu-container.tbg .main-menu .navbar-default .navbar-nav>li>a{
+      color: #753636;
+    }
+    .main-menu .navbar-default .navbar-nav>li>a:after{
+      background-color:#FFFFFF;
+    }			
+    .banner-area-section.home-2{
+      background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(135,219,194,1) 0%, #EE0979 100%) repeat scroll 0 0;
+    }
+    .banner-area-head h1{
+      color: #FFFFFF;
+    }
+    .banner-text{				
+      color: #FFFFFF;
+    }
+    .banner-area-head span{				
+      color: #FFFFFF;
+    }
+
+  
+  
+  a.botao_banner{
+    display: inline-block;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: #dadd1e;
+    color: #333333;
+    border-radius:8px;
+
+  }
+
+  .landy-pricing{
+    box-shadow: 0px 2px 160px 0px rgba(127, 28, 160, 0.7);
+    margin: 0px;
+  }
+  .landy-pricing .pricing-price .content-price{
+    font-size: 42px;
+  }
+  .landy-pricing .content-title{
+    font-size: 26px;
+  }
+  .landy-pricing-content-desc li{
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .div_form{
+    margin-bottom: 25px;
+  }
+
+  .div_form label{
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .acordeon_titulo{
+    font-size: 20px;
+    margin-top:10px;
+    color: #333;
+    font-weight: 500;
+  }
+  .acordeon_descricao{
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+
+  a.botoes_redes{ 
+    display: inline-block;
+    margin-left:20px;              
+    margin-bottom: 20px;
+    color: #666;
+  }
+  a.botoes_redes i{
+    font-size: 46px;
+    display: inline-block; 
+    color: #666;
+  }
+
+
+  .submenu{
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #EE0979 0%, #FF6A00 100%) repeat scroll 0 0;			 
+
+    position: absolute;
+    top:55px;
+    left:0px;
+    width:200px;
+    padding: 10px;
+    border-radius: 3px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    display: none;
+  }
+  .submenu li{			
+    list-style: none;
+    width: 100%;
+  }
+  a.submenu_link{
+    font-size: 15px !important;
+    line-height: 15px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    padding-top:10px !important;
+    padding-bottom:5px !important;
+  }	
+  a.submenu_link:after{
+    top:30px !important;
+  }
+
+  .main-menu-container.tbg .main-menu .navbar-default .navbar-nav>li:hover .submenu{
+    display: block !important;
+  }
+    
+
+  #div-fixa {
+    position: relative;
+    bottom: 30;
+    margin: 30px;
+    background: rgb(71, 73, 72);
+    width: 2;
+    border-radius: 70px;
+    cursor: pointer;
+  
+  }
+  
+  
+  #div-fixa img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #div-fixa a .flex-itens {
+     display: flex;
+     align-items: center;
+   
+  }
+  
+  
+  #div-fixa a .flex-iten span{
+    display: block;
+    
+     font-weight: bold;
+     color: #0d11e4;
+     margin-left: 5px;
+  
+  }
+  
+  .flutuar {
+     animation-name: flutuar;
+     animation-duration: 0.7s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  
+  }
+  
+  @keyframe flutuar {
+      from {
+          transform: translate3d(0, 0, 0);
+          filter: brightness(100%);
+  }
+  to {
+          transform: translate3d(0, =-25px, 0);
+          filter: brightness(150%);
+  }
+
+
+</style>
+</head>
+</body>
