@@ -1,27 +1,64 @@
+/* Definir variáveis para facilitar a personalização */
+:root {
+    --primary-color: #0d47a1;
+    --active-color: #ffab00;
+    --max-width: 800px;
+    --height: 300px;
+    --button-size: 40px;
+}
+
 /* Estilo para o carrossel */
 .swiper {
     width: 100%;
-    max-width: 800px; /* Limita o carrossel a um tamanho máximo */
-    height: 300px; /* Define uma altura razoável para as imagens */
+    max-width: var(--max-width); /* Limita o carrossel a um tamanho máximo */
+    height: var(--height); /* Define uma altura razoável para as imagens */
     margin: 20px auto; /* Centraliza o carrossel */
-}  
+}
+
+/* Estilo para os slides */
 .swiper-slide {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente a imagem dentro do slide */
     align-items: center; /* Centraliza verticalmente a imagem dentro do slide */
 }
-  
+
+/* Estilo para as imagens */
 .swiper-slide img {
     max-width: 100%; /* Faz a imagem ocupar o máximo possível dentro do container, sem ultrapassar */
     max-height: 100%; /* Mantém a imagem dentro da altura definida */
     object-fit: cover; /* Corta a imagem para preencher o container sem distorção */
 }
-  
+
+/* Estilo para os botões de navegação */
 .swiper-button-next, .swiper-button-prev {
-    color: #0d47a1; /* Cor dos botões de navegação */
+    color: var(--primary-color); /* Cor dos botões de navegação */
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo com opacidade para os botões */
+    border-radius: 50%; /* Tornar os botões circulares */
+    width: var(--button-size);
+    height: var(--button-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
 }
-  
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fundo sólido ao passar o mouse */
+}
+
+/* Estilo da página ativa na navegação */
 .swiper-pagination-bullet-active {
-    background-color: #ffab00; /* Cor da página ativa no carrossel */
+    background-color: var(--active-color); /* Cor da página ativa no carrossel */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Estilo para as bolinhas de navegação */
+.swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor padrão das bolinhas */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: var(--active-color); /* Cor das bolinhas ao passar o mouse */
 }
         
