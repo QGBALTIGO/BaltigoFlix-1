@@ -1,7 +1,7 @@
 {
   "name": "gulp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Task automation for web development with Gulp",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.23.6",
@@ -18,9 +18,11 @@
     "gulp-babel": "^7.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "serve": "browser-sync start --server --files 'src/**/*'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["gulp", "automation", "web development"],
+  "author": "Seu Nome ou Organização",
   "license": "ISC"
 }
