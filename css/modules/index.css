@@ -93,6 +93,7 @@
     justify-content: center;
     flex-direction: column;
   }
+  
   .atributos {
     font-size: 0.875rem;
     text-align: center;
@@ -104,7 +105,7 @@
 .cards {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 60px;
   align-items: center;
   justify-content: center;
@@ -207,6 +208,7 @@
   .vantagens {
     background-position: 70% 70%;
   }
+
   .vantagens-content {
     padding: 60px 20px;
     display: flex;
@@ -214,20 +216,25 @@
     justify-content: center;
     flex-direction: column;
   }
+
   .vantagens-titulo {
     font-size: 2.5rem;
     text-align: center;
   }
+
   .vantagens-lista {
     margin: 30px 0;
   }
+
   .vantagem-item {
     grid-template-columns: 40px auto;
   }
+
   .vantagem-item p {
     font-size: 0.875rem;
   }
 }
+
 /* PREÇO */
 .preco-card-titulo {
   font-family: var(--font-titulo);
@@ -291,15 +298,19 @@
   .preco-card-lista-item {
     grid-template-columns: 30px auto;
   }
+
   .preco-card-valor {
     padding: 10px;
   }
+
   .preco-card-lista-item p {
     font-size: 0.875rem;
   }
+
   .valor {
     font-size: 2.5rem;
   }
+
   .preco-card-mes,
   .preco-card-sup {
     font-size: 1rem;
