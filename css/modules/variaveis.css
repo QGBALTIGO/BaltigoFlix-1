@@ -1,5 +1,6 @@
-/* CORES */
+/* CORES, FONTES E HEADER */
 :root {
+  /* CORES */
   --background: #1E2022;
   --background-img: rgba(30, 32, 34, 0.3);
   --background-header: rgba(37, 42, 52, 0.15);
@@ -11,18 +12,14 @@
   --azul: #08D9D6;
   --shadow-vermelho: 0px 5px 20px #FF2E63;
   --shadow-azul: 0px -5px 20px #08D9D6;
-  --shadow-header: 0px 5px 20px  rgba(0, 0, 0, 0.15);
+  --shadow-header: 0px 5px 20px rgba(0, 0, 0, 0.15);
   --shadow-cinza: 4px 10px 20px rgba(0, 0, 0, 0.1);
-}
 
-/* FONTES */
-:root {
+  /* FONTES */
   --font-titulo: 'Oxygen', sans-serif;
   --font: 'Fira Sans', sans-serif;
-}
 
-/* HEADER */
-:root {
+  /* HEADER */
   --header-height: 90px;
   --header-scroll-height: 70px;
 }
