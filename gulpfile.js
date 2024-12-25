@@ -1,7 +1,7 @@
 // Iniciar
 // npm install
 
-// Adiciona os modulos instalados
+// Adiciona os módulos instalados
 const gulp = require('gulp');
 const cssMin = require('gulp-cssmin');
 const cssComments = require('gulp-strip-css-comments');
@@ -16,7 +16,7 @@ function minifyCSS() {
   return gulp
     .src('css/modules/*.css')
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      overrideBrowserslist: ['last 2 versions'],
       cascade: false
     }))
     .pipe(concat('style.min.css'))
@@ -26,20 +26,20 @@ function minifyCSS() {
     .pipe(browserSync.stream());
 }
 
-// Função para juntar o JS
+// Função para juntar e minificar o JS
 function gulpJS() {
   return gulp
     .src('js/scripts/*.js')
     .pipe(concat('main.js'))
     .pipe(babel({
-      presets: ['env']
+      presets: ['@babel/preset-env']
     }))
     .pipe(uglify())
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream());
 }
 
-// Função para iniciar o browser
+// Função para iniciar o servidor no navegador
 function browser() {
   browserSync.init({
     server: {
@@ -51,7 +51,7 @@ function browser() {
 // Função de watch do Gulp
 function watch() {
   gulp.watch('css/modules/*.css', minifyCSS);
-  gulp.watch('js/main/*.js', gulpJS);
+  gulp.watch('js/scripts/*.js', gulpJS);
   gulp.watch(['*.html']).on('change', browserSync.reload);
 }
 
